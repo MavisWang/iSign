@@ -6,19 +6,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package isign;
+package UI;
 
-/**
- *
- * @author Mavis
- */
-public class iSign extends javax.swing.JFrame {
+import javax.swing.JButton;
+
+import Service.RecognizeChar;
+
+import java.awt.Toolkit;
+
+import javax.swing.*;
+
+public class iSign extends JFrame {
+	
+	public static String ToBeStartedMSG = "Follow the instruction in the left";
+	public static String SuccessMSG = "Yes! You did it!";
+    public RecognizeChar RC;
 
     /**
      * Creates new form iSign
      */
     public iSign() {
         initComponents();
+        int Pos_w = (Toolkit.getDefaultToolkit().getScreenSize().width - 1000) / 2;
+		int Pos_h = (Toolkit.getDefaultToolkit().getScreenSize().height - 900) / 2;
+		setLocation(Pos_w, Pos_h);
     }
 
     /**
@@ -29,82 +40,85 @@ public class iSign extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+        //bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        jButton13 = new javax.swing.JButton();
-        root = new javax.swing.JPanel();
-        home_p = new javax.swing.JPanel();
-        welcome_l = new javax.swing.JLabel();
-        s1_go_b = new javax.swing.JButton();
-        s2_go_b = new javax.swing.JButton();
-        s3_go_b = new javax.swing.JButton();
-        s1_info_l = new javax.swing.JLabel();
-        s2_info_l = new javax.swing.JLabel();
-        s3_info_l = new javax.swing.JLabel();
-        background = new javax.swing.JLabel();
-        s1_panel = new javax.swing.JPanel();
-        Sym_choose_p = new javax.swing.JTabbedPane();
-        AtoZ_p = new javax.swing.JPanel();
-        A_b = new javax.swing.JButton();
-        B_b = new javax.swing.JButton();
-        C_b = new javax.swing.JButton();
-        D_b = new javax.swing.JButton();
-        E_b = new javax.swing.JButton();
-        F_b = new javax.swing.JButton();
-        G_b = new javax.swing.JButton();
-        H_b = new javax.swing.JButton();
-        I_b = new javax.swing.JButton();
-        J_b = new javax.swing.JButton();
-        K_b = new javax.swing.JButton();
-        L_b = new javax.swing.JButton();
-        M_b = new javax.swing.JButton();
-        N_b = new javax.swing.JButton();
-        O_b = new javax.swing.JButton();
-        P_b = new javax.swing.JButton();
-        Q_b = new javax.swing.JButton();
-        R_b = new javax.swing.JButton();
-        S_b = new javax.swing.JButton();
-        T_S = new javax.swing.JButton();
-        U_b = new javax.swing.JButton();
-        V_b = new javax.swing.JButton();
-        U_b2 = new javax.swing.JButton();
-        U_b3 = new javax.swing.JButton();
-        U_b4 = new javax.swing.JButton();
-        U_b5 = new javax.swing.JButton();
-        Num_p = new javax.swing.JPanel();
-        n1_b = new javax.swing.JButton();
-        n2_b = new javax.swing.JButton();
-        n3_b = new javax.swing.JButton();
-        n4_b = new javax.swing.JButton();
-        n5_b = new javax.swing.JButton();
-        n6_b = new javax.swing.JButton();
-        n7_b = new javax.swing.JButton();
-        n8_b = new javax.swing.JButton();
-        n9_b = new javax.swing.JButton();
-        n10_b = new javax.swing.JButton();
-        word_p = new javax.swing.JPanel();
-        I_word_b = new javax.swing.JButton();
-        you_b = new javax.swing.JButton();
-        see_b = new javax.swing.JButton();
-        fine_b = new javax.swing.JButton();
-        tomorrow_b = new javax.swing.JButton();
-        me_too_b = new javax.swing.JButton();
-        hold_on_b = new javax.swing.JButton();
-        hello_b = new javax.swing.JButton();
-        bye_b = new javax.swing.JButton();
-        love_b = new javax.swing.JButton();
-        sorry_b = new javax.swing.JButton();
-        yes_b = new javax.swing.JButton();
-        s1_sym_hint_p = new javax.swing.JPanel();
-        s1_prompt_l = new javax.swing.JLabel();
-        s1_back_b = new javax.swing.JButton();
-        background1 = new javax.swing.JLabel();
-        s2_panel = new javax.swing.JPanel();
-        s2_back_b = new javax.swing.JButton();
-        background2 = new javax.swing.JLabel();
-        s3_panel = new javax.swing.JPanel();
-        s3_back_b = new javax.swing.JButton();
-        background3 = new javax.swing.JLabel();
+        jButton13 = new JButton();
+        root = new JPanel();
+        home_p = new JPanel();
+        welcome_l = new JLabel();
+        s1_go_b = new JButton();
+        s2_go_b = new JButton();
+        s3_go_b = new JButton();
+        s1_info_l = new JLabel();
+        s2_info_l = new JLabel();
+        s3_info_l = new JLabel();
+        background = new JLabel();
+        s1_panel = new JPanel();
+        Sym_choose_p = new JTabbedPane();
+        AtoZ_p = new JPanel();
+        A_b = new JButton();
+        B_b = new JButton();
+        C_b = new JButton();
+        D_b = new JButton();
+        E_b = new JButton();
+        F_b = new JButton();
+        G_b = new JButton();
+        H_b = new JButton();
+        I_b = new JButton();
+        J_b = new JButton();
+        K_b = new JButton();
+        L_b = new JButton();
+        M_b = new JButton();
+        N_b = new JButton();
+        O_b = new JButton();
+        P_b = new JButton();
+        Q_b = new JButton();
+        R_b = new JButton();
+        S_b = new JButton();
+        T_S = new JButton();
+        U_b = new JButton();
+        V_b = new JButton();
+        U_b2 = new JButton();
+        U_b3 = new JButton();
+        U_b4 = new JButton();
+        U_b5 = new JButton();
+        Num_p = new JPanel();
+        n1_b = new JButton();
+        n2_b = new JButton();
+        n3_b = new JButton();
+        n4_b = new JButton();
+        n5_b = new JButton();
+        n6_b = new JButton();
+        n7_b = new JButton();
+        n8_b = new JButton();
+        n9_b = new JButton();
+        n10_b = new JButton();
+        word_p = new JPanel();
+        I_word_b = new JButton();
+        you_b = new JButton();
+        see_b = new JButton();
+        fine_b = new JButton();
+        tomorrow_b = new JButton();
+        me_too_b = new JButton();
+        hold_on_b = new JButton();
+        hello_b = new JButton();
+        bye_b = new JButton();
+        love_b = new JButton();
+        sorry_b = new JButton();
+        yes_b = new JButton();
+        //s1_sym_hint_p = new JPanel();
+        s1_sym_image = new JLabel();
+        s1_prompt_l = new JLabel();
+        s1_tick_image = new JLabel();
+        s1_perf_b = new JButton();
+        s1_back_b = new JButton();
+        background1 = new JLabel();
+        s2_panel = new JPanel();
+        s2_back_b = new JButton();
+        background2 = new JLabel();
+        s3_panel = new JPanel();
+        s3_back_b = new JButton();
+        background3 = new JLabel();
 
         jButton13.setText("jButton4");
         jButton13.setSize(new java.awt.Dimension(100, 100));
@@ -191,7 +205,7 @@ public class iSign extends javax.swing.JFrame {
         A_b.setSize(new java.awt.Dimension(100, 100));
         A_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A_bActionPerformed(evt);
+                A_bActionPerformed(evt);                
             }
         });
 
@@ -520,8 +534,8 @@ public class iSign extends javax.swing.JFrame {
 
         Num_p.setPreferredSize(new java.awt.Dimension(900, 220));
 
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, background1, org.jdesktop.beansbinding.ELProperty.create("${background}"), Num_p, org.jdesktop.beansbinding.BeanProperty.create("background"));
-        bindingGroup.addBinding(binding);
+        //org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, background1, org.jdesktop.beansbinding.ELProperty.create("${background}"), Num_p, org.jdesktop.beansbinding.BeanProperty.create("background"));
+        //bindingGroup.addBinding(binding);
 
         n1_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
         n1_b.setText("1");
@@ -825,15 +839,23 @@ public class iSign extends javax.swing.JFrame {
         s1_panel.add(Sym_choose_p);
         Sym_choose_p.setBounds(40, 50, 950, 220);
 
-        s1_sym_hint_p.setLayout(null);
-        s1_panel.add(s1_sym_hint_p);
-        s1_sym_hint_p.setBounds(150, 320, 320, 320);
+        //s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/A.png")));
+        //s1_sym_image.setText("lalala");
+        //s1_sym_hint_p.setLayout(null);
+        s1_sym_image.setBounds(150, 320, 320, 320);
+        //s1_sym_hint_p.add(s1_sym_image);
+        s1_panel.add(s1_sym_image);
+        
+        s1_tick_image.setBounds(580, 400, 80, 80);
+        s1_tick_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+        s1_tick_image.setVisible(false);
+        s1_panel.add(s1_tick_image);
 
         s1_prompt_l.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         s1_prompt_l.setForeground(new java.awt.Color(255, 204, 0));
-        s1_prompt_l.setText("jLabel1");
+        s1_prompt_l.setText("Please select a sign");
         s1_panel.add(s1_prompt_l);
-        s1_prompt_l.setBounds(680, 360, 110, 50);
+        s1_prompt_l.setBounds(580, 260, 400, 200);
 
         s1_back_b.setText("Back");
         s1_back_b.addActionListener(new java.awt.event.ActionListener() {
@@ -842,7 +864,18 @@ public class iSign extends javax.swing.JFrame {
             }
         });
         s1_panel.add(s1_back_b);
-        s1_back_b.setBounds(690, 580, 75, 29);
+        s1_back_b.setBounds(750, 580, 100, 50);
+        s1_back_b.setFont(new java.awt.Font("Malayalam MN", 0, 20));
+        
+        s1_perf_b.setText("Test");
+        s1_perf_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s1_perf_bActionPerformed(evt);
+            }
+        });
+        s1_panel.add(s1_perf_b);
+        s1_perf_b.setBounds(590, 580, 100, 50);
+        s1_perf_b.setFont(new java.awt.Font("Malayalam MN", 0, 20));
 
         background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
         background1.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -911,7 +944,7 @@ public class iSign extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        bindingGroup.bind();
+        //bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -928,6 +961,19 @@ public class iSign extends javax.swing.JFrame {
         cl.first(root);        // TODO add your handling code here:
     }//GEN-LAST:event_s1_back_bActionPerformed
 
+    private void s1_perf_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s1_perf_bActionPerformed
+        // TODO add your handling code here:
+    	try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	RC.ReadSign();   
+    	s1_tick_image.setVisible(true);
+    	s1_prompt_l.setText(SuccessMSG);
+    }//GEN-LAST:event_s1_perf_bActionPerformed
+    
     private void s2_go_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_go_bActionPerformed
         java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
         cl.show(root,"card4");// TODO add your handling code here:
@@ -1034,22 +1080,54 @@ public class iSign extends javax.swing.JFrame {
 
     private void E_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/E.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("E");
     }//GEN-LAST:event_E_bActionPerformed
 
     private void D_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/D.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("D");
     }//GEN-LAST:event_D_bActionPerformed
 
     private void C_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/C.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("C");
     }//GEN-LAST:event_C_bActionPerformed
 
     private void B_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/B.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("B");
     }//GEN-LAST:event_B_bActionPerformed
 
     private void A_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/A.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("A");
+        //RC.ReadSign();
+        //s1_prompt_l.setText(SuccessMSG);
     }//GEN-LAST:event_A_bActionPerformed
 
     private void n1_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_bActionPerformed
@@ -1176,80 +1254,83 @@ public class iSign extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton A_b;
-    private javax.swing.JPanel AtoZ_p;
-    private javax.swing.JButton B_b;
-    private javax.swing.JButton C_b;
-    private javax.swing.JButton D_b;
-    private javax.swing.JButton E_b;
-    private javax.swing.JButton F_b;
-    private javax.swing.JButton G_b;
-    private javax.swing.JButton H_b;
-    private javax.swing.JButton I_b;
-    private javax.swing.JButton I_word_b;
-    private javax.swing.JButton J_b;
-    private javax.swing.JButton K_b;
-    private javax.swing.JButton L_b;
-    private javax.swing.JButton M_b;
-    private javax.swing.JButton N_b;
-    private javax.swing.JPanel Num_p;
-    private javax.swing.JButton O_b;
-    private javax.swing.JButton P_b;
-    private javax.swing.JButton Q_b;
-    private javax.swing.JButton R_b;
-    private javax.swing.JButton S_b;
-    private javax.swing.JTabbedPane Sym_choose_p;
-    private javax.swing.JButton T_S;
-    private javax.swing.JButton U_b;
-    private javax.swing.JButton U_b2;
-    private javax.swing.JButton U_b3;
-    private javax.swing.JButton U_b4;
-    private javax.swing.JButton U_b5;
-    private javax.swing.JButton V_b;
-    private javax.swing.JLabel background;
-    private javax.swing.JLabel background1;
-    private javax.swing.JLabel background2;
-    private javax.swing.JLabel background3;
-    private javax.swing.JButton bye_b;
-    private javax.swing.JButton fine_b;
-    private javax.swing.JButton hello_b;
-    private javax.swing.JButton hold_on_b;
-    private javax.swing.JPanel home_p;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton love_b;
-    private javax.swing.JButton me_too_b;
-    private javax.swing.JButton n10_b;
-    private javax.swing.JButton n1_b;
-    private javax.swing.JButton n2_b;
-    private javax.swing.JButton n3_b;
-    private javax.swing.JButton n4_b;
-    private javax.swing.JButton n5_b;
-    private javax.swing.JButton n6_b;
-    private javax.swing.JButton n7_b;
-    private javax.swing.JButton n8_b;
-    private javax.swing.JButton n9_b;
-    private javax.swing.JPanel root;
-    private javax.swing.JButton s1_back_b;
-    private javax.swing.JButton s1_go_b;
-    private javax.swing.JLabel s1_info_l;
-    private javax.swing.JPanel s1_panel;
-    private javax.swing.JLabel s1_prompt_l;
-    private javax.swing.JPanel s1_sym_hint_p;
-    private javax.swing.JButton s2_back_b;
-    private javax.swing.JButton s2_go_b;
-    private javax.swing.JLabel s2_info_l;
-    private javax.swing.JPanel s2_panel;
-    private javax.swing.JButton s3_back_b;
-    private javax.swing.JButton s3_go_b;
-    private javax.swing.JLabel s3_info_l;
-    private javax.swing.JPanel s3_panel;
-    private javax.swing.JButton see_b;
-    private javax.swing.JButton sorry_b;
-    private javax.swing.JButton tomorrow_b;
-    private javax.swing.JLabel welcome_l;
-    private javax.swing.JPanel word_p;
-    private javax.swing.JButton yes_b;
-    private javax.swing.JButton you_b;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    private JButton A_b;
+    private JPanel AtoZ_p;
+    private JButton B_b;
+    private JButton C_b;
+    private JButton D_b;
+    private JButton E_b;
+    private JButton F_b;
+    private JButton G_b;
+    private JButton H_b;
+    private JButton I_b;
+    private JButton I_word_b;
+    private JButton J_b;
+    private JButton K_b;
+    private JButton L_b;
+    private JButton M_b;
+    private JButton N_b;
+    private JPanel Num_p;
+    private JButton O_b;
+    private JButton P_b;
+    private JButton Q_b;
+    private JButton R_b;
+    private JButton S_b;
+    private JTabbedPane Sym_choose_p;
+    private JButton T_S;
+    private JButton U_b;
+    private JButton U_b2;
+    private JButton U_b3;
+    private JButton U_b4;
+    private JButton U_b5;
+    private JButton V_b;
+    private JLabel background;
+    private JLabel background1;
+    private JLabel background2;
+    private JLabel background3;
+    private JButton bye_b;
+    private JButton fine_b;
+    private JButton hello_b;
+    private JButton hold_on_b;
+    private JPanel home_p;
+    private JButton jButton13;
+    private JButton love_b;
+    private JButton me_too_b;
+    private JButton n10_b;
+    private JButton n1_b;
+    private JButton n2_b;
+    private JButton n3_b;
+    private JButton n4_b;
+    private JButton n5_b;
+    private JButton n6_b;
+    private JButton n7_b;
+    private JButton n8_b;
+    private JButton n9_b;
+    private JPanel root;
+    private JButton s1_back_b;
+    private JButton s1_perf_b;
+    private JButton s1_go_b;
+    private JLabel s1_info_l;
+    private JPanel s1_panel;
+    private JLabel s1_prompt_l;
+    //private JPanel s1_sym_hint_p;
+    private JButton s2_back_b;
+    private JButton s2_go_b;
+    private JLabel s2_info_l;
+    private JPanel s2_panel;
+    private JButton s3_back_b;
+    private JButton s3_go_b;
+    private JLabel s3_info_l;
+    private JPanel s3_panel;
+    private JButton see_b;
+    private JButton sorry_b;
+    private JButton tomorrow_b;
+    private JLabel welcome_l;
+    private JPanel word_p;
+    private JButton yes_b;
+    private JButton you_b;
+    private JLabel s1_sym_image;
+    private JLabel s1_tick_image;
+    //private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
