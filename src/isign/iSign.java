@@ -31,6 +31,7 @@ public class iSign extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
+        jButton13 = new javax.swing.JButton();
         root = new javax.swing.JPanel();
         home_p = new javax.swing.JPanel();
         welcome_l = new javax.swing.JLabel();
@@ -42,24 +43,74 @@ public class iSign extends javax.swing.JFrame {
         s3_info_l = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         s1_panel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel3 = new javax.swing.JPanel();
-        sym1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Sym_choose_p = new javax.swing.JTabbedPane();
+        AtoZ_p = new javax.swing.JPanel();
+        A_b = new javax.swing.JButton();
+        B_b = new javax.swing.JButton();
+        C_b = new javax.swing.JButton();
+        D_b = new javax.swing.JButton();
+        E_b = new javax.swing.JButton();
+        F_b = new javax.swing.JButton();
+        G_b = new javax.swing.JButton();
+        H_b = new javax.swing.JButton();
+        I_b = new javax.swing.JButton();
+        J_b = new javax.swing.JButton();
+        K_b = new javax.swing.JButton();
+        L_b = new javax.swing.JButton();
+        M_b = new javax.swing.JButton();
+        N_b = new javax.swing.JButton();
+        O_b = new javax.swing.JButton();
+        P_b = new javax.swing.JButton();
+        Q_b = new javax.swing.JButton();
+        R_b = new javax.swing.JButton();
+        S_b = new javax.swing.JButton();
+        T_S = new javax.swing.JButton();
+        U_b = new javax.swing.JButton();
+        V_b = new javax.swing.JButton();
+        U_b2 = new javax.swing.JButton();
+        U_b3 = new javax.swing.JButton();
+        U_b4 = new javax.swing.JButton();
+        U_b5 = new javax.swing.JButton();
+        Num_p = new javax.swing.JPanel();
+        n1_b = new javax.swing.JButton();
+        n2_b = new javax.swing.JButton();
+        n3_b = new javax.swing.JButton();
+        n4_b = new javax.swing.JButton();
+        n5_b = new javax.swing.JButton();
+        n6_b = new javax.swing.JButton();
+        n7_b = new javax.swing.JButton();
+        n8_b = new javax.swing.JButton();
+        n9_b = new javax.swing.JButton();
+        n10_b = new javax.swing.JButton();
+        word_p = new javax.swing.JPanel();
+        I_word_b = new javax.swing.JButton();
+        you_b = new javax.swing.JButton();
+        see_b = new javax.swing.JButton();
+        fine_b = new javax.swing.JButton();
+        tomorrow_b = new javax.swing.JButton();
+        me_too_b = new javax.swing.JButton();
+        hold_on_b = new javax.swing.JButton();
+        hello_b = new javax.swing.JButton();
+        bye_b = new javax.swing.JButton();
+        love_b = new javax.swing.JButton();
+        sorry_b = new javax.swing.JButton();
+        yes_b = new javax.swing.JButton();
+        s1_sym_hint_p = new javax.swing.JPanel();
+        s1_prompt_l = new javax.swing.JLabel();
+        s1_back_b = new javax.swing.JButton();
         background1 = new javax.swing.JLabel();
         s2_panel = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        s2_back_b = new javax.swing.JButton();
         background2 = new javax.swing.JLabel();
         s3_panel = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        s3_back_b = new javax.swing.JButton();
         background3 = new javax.swing.JLabel();
+
+        jButton13.setText("jButton4");
+        jButton13.setSize(new java.awt.Dimension(100, 100));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("iSign");
-        setPreferredSize(new java.awt.Dimension(1024, 700));
         setResizable(false);
 
         root.setLayout(new java.awt.CardLayout());
@@ -131,75 +182,667 @@ public class iSign extends javax.swing.JFrame {
         s1_panel.setPreferredSize(new java.awt.Dimension(1024, 700));
         s1_panel.setLayout(null);
 
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Please choose a symbol to learn", 0, 0, new java.awt.Font("Malayalam MN", 0, 14), new java.awt.Color(255, 204, 51))); // NOI18N
-        jScrollPane1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
+        Sym_choose_p.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Please choose a symbol to learn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Malayalam MN", 0, 18), new java.awt.Color(255, 204, 51))); // NOI18N
 
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, background1, org.jdesktop.beansbinding.ELProperty.create("${background}"), jScrollPane1, org.jdesktop.beansbinding.BeanProperty.create("background"));
-        bindingGroup.addBinding(binding);
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, background1, org.jdesktop.beansbinding.ELProperty.create("${background}"), jScrollPane1, org.jdesktop.beansbinding.BeanProperty.create("foreground"));
-        bindingGroup.addBinding(binding);
+        AtoZ_p.setPreferredSize(new java.awt.Dimension(900, 220));
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, background1, org.jdesktop.beansbinding.ELProperty.create("${background}"), jPanel3, org.jdesktop.beansbinding.BeanProperty.create("background"));
-        bindingGroup.addBinding(binding);
-
-        jPanel3.setLayout(null);
-
-        sym1.setText("symbol1");
-        sym1.addActionListener(new java.awt.event.ActionListener() {
+        A_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        A_b.setText("A");
+        A_b.setSize(new java.awt.Dimension(100, 100));
+        A_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sym1ActionPerformed(evt);
+                A_bActionPerformed(evt);
             }
         });
-        jPanel3.add(sym1);
-        sym1.setBounds(10, 10, 80, 70);
 
-        jScrollPane1.setViewportView(jPanel3);
-
-        s1_panel.add(jScrollPane1);
-        jScrollPane1.setBounds(40, 50, 940, 220);
-
-        jLabel1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
-        jLabel1.setText("jLabel1");
-        s1_panel.add(jLabel1);
-        jLabel1.setBounds(470, 320, 110, 50);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
-
-        s1_panel.add(jPanel1);
-        jPanel1.setBounds(40, 290, 340, 310);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
-
-        s1_panel.add(jPanel2);
-        jPanel2.setBounds(640, 290, 340, 310);
-
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        B_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        B_b.setText("B");
+        B_b.setSize(new java.awt.Dimension(100, 100));
+        B_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                B_bActionPerformed(evt);
             }
         });
-        s1_panel.add(jButton1);
-        jButton1.setBounds(40, 630, 75, 29);
+
+        C_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        C_b.setText("C");
+        C_b.setSize(new java.awt.Dimension(100, 100));
+        C_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                C_bActionPerformed(evt);
+            }
+        });
+
+        D_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        D_b.setText("D");
+        D_b.setSize(new java.awt.Dimension(100, 100));
+        D_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                D_bActionPerformed(evt);
+            }
+        });
+
+        E_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        E_b.setText("E");
+        E_b.setSize(new java.awt.Dimension(100, 100));
+        E_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                E_bActionPerformed(evt);
+            }
+        });
+
+        F_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        F_b.setText("F");
+        F_b.setSize(new java.awt.Dimension(100, 100));
+        F_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                F_bActionPerformed(evt);
+            }
+        });
+
+        G_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        G_b.setText("G");
+        G_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                G_bActionPerformed(evt);
+            }
+        });
+
+        H_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        H_b.setText("H");
+        H_b.setSize(new java.awt.Dimension(100, 100));
+        H_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                H_bActionPerformed(evt);
+            }
+        });
+
+        I_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        I_b.setText("I");
+        I_b.setSize(new java.awt.Dimension(100, 100));
+        I_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                I_bActionPerformed(evt);
+            }
+        });
+
+        J_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        J_b.setText("J");
+        J_b.setSize(new java.awt.Dimension(100, 100));
+        J_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                J_bActionPerformed(evt);
+            }
+        });
+
+        K_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        K_b.setText("K");
+        K_b.setSize(new java.awt.Dimension(100, 100));
+        K_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                K_bActionPerformed(evt);
+            }
+        });
+
+        L_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        L_b.setText("L");
+        L_b.setSize(new java.awt.Dimension(100, 100));
+        L_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                L_bActionPerformed(evt);
+            }
+        });
+
+        M_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        M_b.setText("M");
+        M_b.setSize(new java.awt.Dimension(100, 100));
+        M_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M_bActionPerformed(evt);
+            }
+        });
+
+        N_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        N_b.setText("N");
+        N_b.setSize(new java.awt.Dimension(100, 100));
+        N_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N_bActionPerformed(evt);
+            }
+        });
+
+        O_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        O_b.setText("O");
+        O_b.setSize(new java.awt.Dimension(100, 100));
+        O_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                O_bActionPerformed(evt);
+            }
+        });
+
+        P_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        P_b.setText("P");
+        P_b.setSize(new java.awt.Dimension(100, 100));
+        P_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                P_bActionPerformed(evt);
+            }
+        });
+
+        Q_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        Q_b.setText("Q");
+        Q_b.setSize(new java.awt.Dimension(100, 100));
+        Q_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q_bActionPerformed(evt);
+            }
+        });
+
+        R_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        R_b.setText("R");
+        R_b.setSize(new java.awt.Dimension(100, 100));
+        R_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R_bActionPerformed(evt);
+            }
+        });
+
+        S_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        S_b.setText("S");
+        S_b.setSize(new java.awt.Dimension(100, 100));
+        S_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                S_bActionPerformed(evt);
+            }
+        });
+
+        T_S.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        T_S.setText("T");
+        T_S.setSize(new java.awt.Dimension(100, 100));
+        T_S.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                T_SActionPerformed(evt);
+            }
+        });
+
+        U_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        U_b.setText("U");
+        U_b.setSize(new java.awt.Dimension(100, 100));
+        U_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                U_bActionPerformed(evt);
+            }
+        });
+
+        V_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        V_b.setText("V");
+        V_b.setSize(new java.awt.Dimension(100, 100));
+        V_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                V_bActionPerformed(evt);
+            }
+        });
+
+        U_b2.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        U_b2.setText("X");
+        U_b2.setSize(new java.awt.Dimension(100, 100));
+        U_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                U_b2ActionPerformed(evt);
+            }
+        });
+
+        U_b3.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        U_b3.setText("W");
+        U_b3.setSize(new java.awt.Dimension(100, 100));
+        U_b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                U_b3ActionPerformed(evt);
+            }
+        });
+
+        U_b4.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        U_b4.setText("Y");
+        U_b4.setSize(new java.awt.Dimension(100, 100));
+        U_b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                U_b4ActionPerformed(evt);
+            }
+        });
+
+        U_b5.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        U_b5.setText("Z");
+        U_b5.setSize(new java.awt.Dimension(100, 100));
+        U_b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                U_b5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout AtoZ_pLayout = new javax.swing.GroupLayout(AtoZ_p);
+        AtoZ_p.setLayout(AtoZ_pLayout);
+        AtoZ_pLayout.setHorizontalGroup(
+            AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AtoZ_pLayout.createSequentialGroup()
+                .addGroup(AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(A_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(N_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(B_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(O_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AtoZ_pLayout.createSequentialGroup()
+                        .addComponent(C_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(D_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(E_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AtoZ_pLayout.createSequentialGroup()
+                        .addComponent(P_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Q_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(R_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AtoZ_pLayout.createSequentialGroup()
+                        .addComponent(S_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(T_S, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(U_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(V_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(U_b3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(U_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(U_b4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(U_b5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AtoZ_pLayout.createSequentialGroup()
+                        .addComponent(F_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(G_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(H_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(I_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(J_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(K_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(L_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(M_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        AtoZ_pLayout.setVerticalGroup(
+            AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AtoZ_pLayout.createSequentialGroup()
+                .addGroup(AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(A_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(D_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(E_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(F_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(G_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(H_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(I_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(J_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(K_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(L_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(M_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AtoZ_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(N_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(O_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Q_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(S_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(T_S, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(U_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(V_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(U_b3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(U_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(U_b4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(U_b5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        Sym_choose_p.addTab("Alphabets", AtoZ_p);
+
+        Num_p.setPreferredSize(new java.awt.Dimension(900, 220));
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, background1, org.jdesktop.beansbinding.ELProperty.create("${background}"), Num_p, org.jdesktop.beansbinding.BeanProperty.create("background"));
+        bindingGroup.addBinding(binding);
+
+        n1_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n1_b.setText("1");
+        n1_b.setSize(new java.awt.Dimension(100, 100));
+        n1_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n1_bActionPerformed(evt);
+            }
+        });
+
+        n2_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n2_b.setText("3");
+        n2_b.setSize(new java.awt.Dimension(100, 100));
+        n2_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n2_bActionPerformed(evt);
+            }
+        });
+
+        n3_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n3_b.setText("2");
+        n3_b.setSize(new java.awt.Dimension(100, 100));
+        n3_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n3_bActionPerformed(evt);
+            }
+        });
+
+        n4_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n4_b.setText("4");
+        n4_b.setSize(new java.awt.Dimension(100, 100));
+        n4_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n4_bActionPerformed(evt);
+            }
+        });
+
+        n5_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n5_b.setText("5");
+        n5_b.setSize(new java.awt.Dimension(100, 100));
+        n5_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n5_bActionPerformed(evt);
+            }
+        });
+
+        n6_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n6_b.setText("6");
+        n6_b.setSize(new java.awt.Dimension(100, 100));
+        n6_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n6_bActionPerformed(evt);
+            }
+        });
+
+        n7_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n7_b.setText("7");
+        n7_b.setSize(new java.awt.Dimension(100, 100));
+        n7_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n7_bActionPerformed(evt);
+            }
+        });
+
+        n8_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n8_b.setText("8");
+        n8_b.setSize(new java.awt.Dimension(100, 100));
+        n8_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n8_bActionPerformed(evt);
+            }
+        });
+
+        n9_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n9_b.setText("9");
+        n9_b.setSize(new java.awt.Dimension(100, 100));
+        n9_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n9_bActionPerformed(evt);
+            }
+        });
+
+        n10_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n10_b.setText("10");
+        n10_b.setSize(new java.awt.Dimension(100, 100));
+        n10_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n10_bActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Num_pLayout = new javax.swing.GroupLayout(Num_p);
+        Num_p.setLayout(Num_pLayout);
+        Num_pLayout.setHorizontalGroup(
+            Num_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Num_pLayout.createSequentialGroup()
+                .addComponent(n1_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n3_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n2_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n4_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n5_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n6_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n7_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n8_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n9_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n10_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 213, Short.MAX_VALUE))
+        );
+        Num_pLayout.setVerticalGroup(
+            Num_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Num_pLayout.createSequentialGroup()
+                .addGroup(Num_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(n1_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n2_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n3_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n4_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n5_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n6_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n7_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n8_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n9_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n10_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 75, Short.MAX_VALUE))
+        );
+
+        Sym_choose_p.addTab("Numbers", Num_p);
+
+        word_p.setPreferredSize(new java.awt.Dimension(900, 220));
+
+        I_word_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        I_word_b.setText("I");
+        I_word_b.setSize(new java.awt.Dimension(100, 100));
+        I_word_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                I_word_bActionPerformed(evt);
+            }
+        });
+
+        you_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        you_b.setText("You");
+        you_b.setSize(new java.awt.Dimension(100, 100));
+        you_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                you_bActionPerformed(evt);
+            }
+        });
+
+        see_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        see_b.setText("Fine");
+        see_b.setSize(new java.awt.Dimension(100, 100));
+        see_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                see_bActionPerformed(evt);
+            }
+        });
+
+        fine_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        fine_b.setText("See");
+        fine_b.setSize(new java.awt.Dimension(100, 100));
+        fine_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fine_bActionPerformed(evt);
+            }
+        });
+
+        tomorrow_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        tomorrow_b.setText("ME TOO");
+        tomorrow_b.setSize(new java.awt.Dimension(100, 100));
+        tomorrow_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tomorrow_bActionPerformed(evt);
+            }
+        });
+
+        me_too_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        me_too_b.setText("Tomorrow");
+        me_too_b.setSize(new java.awt.Dimension(100, 100));
+        me_too_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                me_too_bActionPerformed(evt);
+            }
+        });
+
+        hold_on_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        hold_on_b.setText("Hold on");
+        hold_on_b.setSize(new java.awt.Dimension(100, 100));
+        hold_on_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hold_on_bActionPerformed(evt);
+            }
+        });
+
+        hello_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        hello_b.setText("Hello");
+        hello_b.setSize(new java.awt.Dimension(100, 100));
+        hello_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hello_bActionPerformed(evt);
+            }
+        });
+
+        bye_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        bye_b.setText("BYE");
+        bye_b.setSize(new java.awt.Dimension(100, 100));
+        bye_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bye_bActionPerformed(evt);
+            }
+        });
+
+        love_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        love_b.setText("LOVE");
+        love_b.setSize(new java.awt.Dimension(100, 100));
+        love_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                love_bActionPerformed(evt);
+            }
+        });
+
+        sorry_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        sorry_b.setText("SORRY");
+        sorry_b.setSize(new java.awt.Dimension(100, 100));
+        sorry_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sorry_bActionPerformed(evt);
+            }
+        });
+
+        yes_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        yes_b.setText("YES");
+        yes_b.setSize(new java.awt.Dimension(100, 100));
+        yes_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yes_bActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout word_pLayout = new javax.swing.GroupLayout(word_p);
+        word_p.setLayout(word_pLayout);
+        word_pLayout.setHorizontalGroup(
+            word_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(word_pLayout.createSequentialGroup()
+                .addComponent(I_word_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(you_b, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fine_b, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(see_b, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(me_too_b)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tomorrow_b)
+                .addGap(79, 79, 79))
+            .addGroup(word_pLayout.createSequentialGroup()
+                .addComponent(hold_on_b, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(hello_b)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bye_b)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(love_b)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sorry_b)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(yes_b)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        word_pLayout.setVerticalGroup(
+            word_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(word_pLayout.createSequentialGroup()
+                .addGroup(word_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(I_word_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(you_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(see_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fine_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(me_too_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tomorrow_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(word_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hold_on_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hello_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bye_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(love_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sorry_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(yes_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        Sym_choose_p.addTab("Words", word_p);
+
+        s1_panel.add(Sym_choose_p);
+        Sym_choose_p.setBounds(40, 50, 950, 220);
+
+        s1_sym_hint_p.setLayout(null);
+        s1_panel.add(s1_sym_hint_p);
+        s1_sym_hint_p.setBounds(150, 320, 320, 320);
+
+        s1_prompt_l.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
+        s1_prompt_l.setForeground(new java.awt.Color(255, 204, 0));
+        s1_prompt_l.setText("jLabel1");
+        s1_panel.add(s1_prompt_l);
+        s1_prompt_l.setBounds(680, 360, 110, 50);
+
+        s1_back_b.setText("Back");
+        s1_back_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s1_back_bActionPerformed(evt);
+            }
+        });
+        s1_panel.add(s1_back_b);
+        s1_back_b.setBounds(690, 580, 75, 29);
 
         background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
         background1.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -211,14 +854,14 @@ public class iSign extends javax.swing.JFrame {
 
         s2_panel.setLayout(null);
 
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        s2_back_b.setText("jButton2");
+        s2_back_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                s2_back_bActionPerformed(evt);
             }
         });
-        s2_panel.add(jButton2);
-        jButton2.setBounds(50, 550, 97, 29);
+        s2_panel.add(s2_back_b);
+        s2_back_b.setBounds(50, 550, 97, 29);
 
         background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
         background2.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -230,14 +873,14 @@ public class iSign extends javax.swing.JFrame {
 
         s3_panel.setLayout(null);
 
-        jButton3.setText("jButton3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        s3_back_b.setText("jButton3");
+        s3_back_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                s3_back_bActionPerformed(evt);
             }
         });
-        s3_panel.add(jButton3);
-        jButton3.setBounds(40, 560, 97, 29);
+        s3_panel.add(s3_back_b);
+        s3_back_b.setBounds(40, 560, 97, 29);
 
         background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
         background3.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -280,10 +923,10 @@ public class iSign extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_s1_go_bActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void s1_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s1_back_bActionPerformed
         java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
         cl.first(root);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_s1_back_bActionPerformed
 
     private void s2_go_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_go_bActionPerformed
         java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
@@ -295,19 +938,207 @@ public class iSign extends javax.swing.JFrame {
         cl.show(root,"card5");// TODO add your handling code here:
     }//GEN-LAST:event_s3_go_bActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void s2_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_back_bActionPerformed
         java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
         cl.first(root);// TODO add your handling code here:        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_s2_back_bActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void s3_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_bActionPerformed
         java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
         cl.first(root);// TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_s3_back_bActionPerformed
 
-    private void sym1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sym1ActionPerformed
+    private void U_b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_U_b5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_sym1ActionPerformed
+    }//GEN-LAST:event_U_b5ActionPerformed
+
+    private void U_b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_U_b4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_U_b4ActionPerformed
+
+    private void U_b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_U_b3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_U_b3ActionPerformed
+
+    private void U_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_U_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_U_b2ActionPerformed
+
+    private void V_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_V_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_V_bActionPerformed
+
+    private void U_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_U_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_U_bActionPerformed
+
+    private void T_SActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_T_SActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_T_SActionPerformed
+
+    private void S_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_S_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_S_bActionPerformed
+
+    private void R_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_R_bActionPerformed
+
+    private void Q_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q_bActionPerformed
+
+    private void P_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_P_bActionPerformed
+
+    private void O_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_O_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_O_bActionPerformed
+
+    private void N_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_N_bActionPerformed
+
+    private void M_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_M_bActionPerformed
+
+    private void L_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_L_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_L_bActionPerformed
+
+    private void K_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_K_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_K_bActionPerformed
+
+    private void J_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_J_bActionPerformed
+
+    private void I_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_I_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_I_bActionPerformed
+
+    private void H_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_H_bActionPerformed
+
+    private void G_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_G_bActionPerformed
+
+    private void F_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_F_bActionPerformed
+
+    private void E_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_E_bActionPerformed
+
+    private void D_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_D_bActionPerformed
+
+    private void C_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_C_bActionPerformed
+
+    private void B_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B_bActionPerformed
+
+    private void A_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A_bActionPerformed
+
+    private void n1_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n1_bActionPerformed
+
+    private void n2_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n2_bActionPerformed
+
+    private void n3_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n3_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n3_bActionPerformed
+
+    private void n4_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n4_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n4_bActionPerformed
+
+    private void n5_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n5_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n5_bActionPerformed
+
+    private void n6_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n6_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n6_bActionPerformed
+
+    private void n7_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n7_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n7_bActionPerformed
+
+    private void n8_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n8_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n8_bActionPerformed
+
+    private void n9_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n9_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n9_bActionPerformed
+
+    private void n10_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n10_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n10_bActionPerformed
+
+    private void I_word_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_I_word_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_I_word_bActionPerformed
+
+    private void you_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_you_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_you_bActionPerformed
+
+    private void see_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_see_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_see_bActionPerformed
+
+    private void fine_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fine_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fine_bActionPerformed
+
+    private void tomorrow_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tomorrow_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tomorrow_bActionPerformed
+
+    private void me_too_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_me_too_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_me_too_bActionPerformed
+
+    private void hold_on_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hold_on_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hold_on_bActionPerformed
+
+    private void hello_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hello_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hello_bActionPerformed
+
+    private void bye_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bye_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bye_bActionPerformed
+
+    private void love_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_love_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_love_bActionPerformed
+
+    private void sorry_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sorry_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sorry_bActionPerformed
+
+    private void yes_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yes_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yes_bActionPerformed
 
     /**
      * @param args the command line arguments
@@ -345,31 +1176,80 @@ public class iSign extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton A_b;
+    private javax.swing.JPanel AtoZ_p;
+    private javax.swing.JButton B_b;
+    private javax.swing.JButton C_b;
+    private javax.swing.JButton D_b;
+    private javax.swing.JButton E_b;
+    private javax.swing.JButton F_b;
+    private javax.swing.JButton G_b;
+    private javax.swing.JButton H_b;
+    private javax.swing.JButton I_b;
+    private javax.swing.JButton I_word_b;
+    private javax.swing.JButton J_b;
+    private javax.swing.JButton K_b;
+    private javax.swing.JButton L_b;
+    private javax.swing.JButton M_b;
+    private javax.swing.JButton N_b;
+    private javax.swing.JPanel Num_p;
+    private javax.swing.JButton O_b;
+    private javax.swing.JButton P_b;
+    private javax.swing.JButton Q_b;
+    private javax.swing.JButton R_b;
+    private javax.swing.JButton S_b;
+    private javax.swing.JTabbedPane Sym_choose_p;
+    private javax.swing.JButton T_S;
+    private javax.swing.JButton U_b;
+    private javax.swing.JButton U_b2;
+    private javax.swing.JButton U_b3;
+    private javax.swing.JButton U_b4;
+    private javax.swing.JButton U_b5;
+    private javax.swing.JButton V_b;
     private javax.swing.JLabel background;
     private javax.swing.JLabel background1;
     private javax.swing.JLabel background2;
     private javax.swing.JLabel background3;
+    private javax.swing.JButton bye_b;
+    private javax.swing.JButton fine_b;
+    private javax.swing.JButton hello_b;
+    private javax.swing.JButton hold_on_b;
     private javax.swing.JPanel home_p;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton love_b;
+    private javax.swing.JButton me_too_b;
+    private javax.swing.JButton n10_b;
+    private javax.swing.JButton n1_b;
+    private javax.swing.JButton n2_b;
+    private javax.swing.JButton n3_b;
+    private javax.swing.JButton n4_b;
+    private javax.swing.JButton n5_b;
+    private javax.swing.JButton n6_b;
+    private javax.swing.JButton n7_b;
+    private javax.swing.JButton n8_b;
+    private javax.swing.JButton n9_b;
     private javax.swing.JPanel root;
+    private javax.swing.JButton s1_back_b;
     private javax.swing.JButton s1_go_b;
     private javax.swing.JLabel s1_info_l;
     private javax.swing.JPanel s1_panel;
+    private javax.swing.JLabel s1_prompt_l;
+    private javax.swing.JPanel s1_sym_hint_p;
+    private javax.swing.JButton s2_back_b;
     private javax.swing.JButton s2_go_b;
     private javax.swing.JLabel s2_info_l;
     private javax.swing.JPanel s2_panel;
+    private javax.swing.JButton s3_back_b;
     private javax.swing.JButton s3_go_b;
     private javax.swing.JLabel s3_info_l;
     private javax.swing.JPanel s3_panel;
-    private javax.swing.JButton sym1;
+    private javax.swing.JButton see_b;
+    private javax.swing.JButton sorry_b;
+    private javax.swing.JButton tomorrow_b;
     private javax.swing.JLabel welcome_l;
+    private javax.swing.JPanel word_p;
+    private javax.swing.JButton yes_b;
+    private javax.swing.JButton you_b;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
