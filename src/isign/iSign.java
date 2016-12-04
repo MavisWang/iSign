@@ -11,6 +11,7 @@ package UI;
 import javax.swing.JButton;
 
 import Service.RecognizeChar;
+import Service.RecognizeSentence;
 
 import java.awt.Toolkit;
 
@@ -21,6 +22,7 @@ public class iSign extends JFrame {
 	public static String ToBeStartedMSG = "Follow the instruction in the left";
 	public static String SuccessMSG = "Yes! You did it!";
     public RecognizeChar RC;
+    public RecognizeSentence RS;
 
     /**
      * Creates new form iSign
@@ -132,6 +134,15 @@ public class iSign extends JFrame {
         w1_l = new javax.swing.JLabel();
         w2_l = new javax.swing.JLabel();
         w3_l = new javax.swing.JLabel();
+        t1_l = new javax.swing.JButton();
+        t2_l = new javax.swing.JButton();
+        t3_l = new javax.swing.JButton();
+        r1_l = new javax.swing.JButton();
+        r2_l = new javax.swing.JButton();
+        r3_l = new javax.swing.JButton();
+        tick1_l = new javax.swing.JLabel();
+        tick2_l = new javax.swing.JLabel();
+        tick3_l = new javax.swing.JLabel();
         bg_blanks = new javax.swing.JLabel();
         s3_back_b = new javax.swing.JButton();
         s3_back_b2 = new javax.swing.JButton();
@@ -424,7 +435,7 @@ public class iSign extends JFrame {
             }
         });
 
-        U_b3.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        U_b3.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         U_b3.setText("W");
         U_b3.setSize(new java.awt.Dimension(100, 100));
         U_b3.addActionListener(new java.awt.event.ActionListener() {
@@ -638,7 +649,7 @@ public class iSign extends JFrame {
             }
         });
 
-        n10_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n10_b.setFont(new java.awt.Font("Phosphate", 1, 33)); // NOI18N
         n10_b.setText("10");
         n10_b.setSize(new java.awt.Dimension(100, 100));
         n10_b.addActionListener(new java.awt.event.ActionListener() {
@@ -941,7 +952,7 @@ public class iSign extends JFrame {
         });
 
         n2_b2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
-        n2_b2.setText("HOw old are you");
+        n2_b2.setText("How old are you");
         n2_b2.setSize(new java.awt.Dimension(100, 100));
         n2_b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1052,18 +1063,17 @@ public class iSign extends JFrame {
         s3_panel.add(Sym_choose_p1);
         Sym_choose_p1.setBounds(40, 50, 950, 220);
 
-        s1_prompt_l1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
+        s1_prompt_l1.setFont(new java.awt.Font("Malayalam MN", 1, 20)); // NOI18N
         s1_prompt_l1.setForeground(new java.awt.Color(255, 204, 0));
-        s1_prompt_l1.setText("jLabel1");
+        s1_prompt_l1.setText("<html>Choose a sentence<br> from above</html>");
         s3_panel.add(s1_prompt_l1);
-        s1_prompt_l1.setBounds(790, 360, 110, 50);
+        s1_prompt_l1.setBounds(700, 360, 200, 100);
 
         sentence_p.setLayout(null);
 
         w1_l.setFont(new java.awt.Font("Malayalam MN", 1, 36)); // NOI18N
         w1_l.setForeground(new java.awt.Color(255, 204, 51));
         w1_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        w1_l.setText("I");
         w1_l.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 204, 51)));
         sentence_p.add(w1_l);
         w1_l.setBounds(0, 0, 200, 200);
@@ -1071,7 +1081,6 @@ public class iSign extends JFrame {
         w2_l.setFont(new java.awt.Font("Malayalam MN", 1, 36)); // NOI18N
         w2_l.setForeground(new java.awt.Color(255, 204, 51));
         w2_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        w2_l.setText("FINE");
         w2_l.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 204, 51)));
         sentence_p.add(w2_l);
         w2_l.setBounds(200, 0, 200, 200);
@@ -1079,10 +1088,16 @@ public class iSign extends JFrame {
         w3_l.setFont(new java.awt.Font("Malayalam MN", 1, 36)); // NOI18N
         w3_l.setForeground(new java.awt.Color(255, 204, 51));
         w3_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        w3_l.setText("I");
         w3_l.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 204, 51)));
         sentence_p.add(w3_l);
         w3_l.setBounds(400, 0, 200, 200);
+        
+        tick1_l.setFont(new java.awt.Font("Malayalam MN", 1, 36)); // NOI18N
+        tick1_l.setForeground(new java.awt.Color(255, 204, 51));
+        tick1_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tick1_l.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 204, 51)));
+        sentence_p.add(tick1_l);
+        tick1_l.setBounds(400, 0, 200, 200);
 
         bg_blanks.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
         bg_blanks.setForeground(new java.awt.Color(255, 204, 51));
@@ -1093,6 +1108,8 @@ public class iSign extends JFrame {
 
         s3_panel.add(sentence_p);
         sentence_p.setBounds(70, 320, 600, 200);
+        
+        sentence_p.setVisible(false);
 
         s3_back_b.setText("Back");
         s3_back_b.addActionListener(new java.awt.event.ActionListener() {
@@ -1101,7 +1118,8 @@ public class iSign extends JFrame {
             }
         });
         s3_panel.add(s3_back_b);
-        s3_back_b.setBounds(870, 570, 75, 29);
+        s3_back_b.setBounds(850, 580, 100, 50);
+        s3_back_b.setFont(new java.awt.Font("Malayalam MN", 0, 20));
 
         s3_back_b2.setText("Answer");
         s3_back_b2.addActionListener(new java.awt.event.ActionListener() {
@@ -1110,7 +1128,8 @@ public class iSign extends JFrame {
             }
         });
         s3_panel.add(s3_back_b2);
-        s3_back_b2.setBounds(800, 570, 75, 30);
+        s3_back_b2.setBounds(750, 580, 100, 50);
+        s3_back_b2.setFont(new java.awt.Font("Malayalam MN", 0, 20));
 
         s3_back_b1.setText("Test");
         s3_back_b1.addActionListener(new java.awt.event.ActionListener() {
@@ -1119,7 +1138,8 @@ public class iSign extends JFrame {
             }
         });
         s3_panel.add(s3_back_b1);
-        s3_back_b1.setBounds(730, 570, 75, 29);
+        s3_back_b1.setBounds(650, 580, 100, 50);
+        s3_back_b1.setFont(new java.awt.Font("Malayalam MN", 0, 20));
 
         background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
         background3.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -1175,7 +1195,7 @@ public class iSign extends JFrame {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	RC.ReadSign();   
+    	RC.ReadSign(true);   
     	s1_tick_image.setVisible(true);
     	s1_prompt_l.setText(SuccessMSG);
     }//GEN-LAST:event_s1_perf_bActionPerformed
@@ -1542,6 +1562,17 @@ public class iSign extends JFrame {
 
     private void n1_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_b2ActionPerformed
         // TODO add your handling code here:
+    	w1_l.setText("I");
+    	w2_l.setText("FINE");
+    	w3_l.setText("I");
+    	w1_l.setIcon(null);
+    	w2_l.setIcon(null);
+    	w3_l.setIcon(null);
+    	w3_l.setFont(new java.awt.Font("Malayalam MN", 1, 36));
+    	sentence_p.setVisible(true);
+    	RS = new RecognizeSentence();
+    	//test
+    	RS.CollectSampleSent("A C A");
     }//GEN-LAST:event_n1_b2ActionPerformed
 
     private void n2_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2_b2ActionPerformed
@@ -1554,6 +1585,16 @@ public class iSign extends JFrame {
 
     private void n4_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n4_b2ActionPerformed
         // TODO add your handling code here:
+    	w1_l.setText("SEE");
+    	w2_l.setText("YOU");
+    	w3_l.setText("TOMORROW");
+    	w1_l.setIcon(null);
+    	w2_l.setIcon(null);
+    	w3_l.setIcon(null);
+    	w3_l.setFont(new java.awt.Font("Malayalam MN", 1, 24));
+    	sentence_p.setVisible(true);
+    	RS = new RecognizeSentence();
+    	RS.CollectSampleSent("See you tomorrow");
     }//GEN-LAST:event_n4_b2ActionPerformed
 
     private void n5_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n5_b2ActionPerformed
@@ -1574,10 +1615,68 @@ public class iSign extends JFrame {
 
     private void s3_back_b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_b1ActionPerformed
         // TODO add your handling code here:
+    	RS.SignList = RS.TransIdToSign(RS.SignIdList);
+    	boolean[] IsSuccess = new boolean[3];
+    	
+    	for (int i = 0; i < RS.SignList.size(); i++){
+			try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			RecognizeChar RC = new RecognizeChar();
+			RC.CollectSample(RS.SignList.get(i).toString());
+			RC.ReadSign(true);
+			IsSuccess[i] = RC.Success;
+		}
+    	
+    	if (IsSuccess[0] == true && IsSuccess[1] == true && IsSuccess[2] == true ){
+        	s1_prompt_l1.setText("Yes! You did it!");
+        	w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+        	w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+        	w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+        	w1_l.setText("");
+        	w2_l.setText("");
+        	w3_l.setText("");
+    	}else{
+    		s1_prompt_l1.setText("Please try again!");
+    		if(IsSuccess[0] == true){
+    			w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+    			w1_l.setText("");
+    		}else{
+    			w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/cross.png")));
+    			w1_l.setText("");
+    		}
+    		
+    		if(IsSuccess[1] == true){
+    			w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+    			w2_l.setText("");
+    		}else{
+    			w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/cross.png")));
+    			w2_l.setText("");
+    		}
+    		
+    		if(IsSuccess[2] == true){
+    			w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+    			w3_l.setText("");
+    		}else{
+    			w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/cross.png")));
+    			w3_l.setText("");
+    		}
+    	}
+    	
     }//GEN-LAST:event_s3_back_b1ActionPerformed
 
     private void s3_back_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_b2ActionPerformed
         // TODO add your handling code here:
+    	s1_prompt_l1.setText("Here is the answer");
+    	w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/"+ RS.SignList.get(0).toString() + ".png")));
+    	w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/"+ RS.SignList.get(1).toString() + ".png")));
+    	w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/"+ RS.SignList.get(2).toString() + ".png")));
+    	w1_l.setText("");
+    	w2_l.setText("");
+    	w3_l.setText("");
     }//GEN-LAST:event_s3_back_b2ActionPerformed
 
     /**
@@ -1711,6 +1810,15 @@ public class iSign extends JFrame {
     private javax.swing.JPanel Num_p2;
     private javax.swing.JLabel s1_prompt_l1;
     private javax.swing.JLabel bg_blanks;
+    private javax.swing.JButton t1_l;
+    private javax.swing.JButton t2_l;
+    private javax.swing.JButton t3_l;
+    private javax.swing.JButton r1_l;
+    private javax.swing.JButton r2_l;
+    private javax.swing.JButton r3_l;
+    private javax.swing.JLabel tick1_l;
+    private javax.swing.JLabel tick2_l;
+    private javax.swing.JLabel tick3_l;
     
     //private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
