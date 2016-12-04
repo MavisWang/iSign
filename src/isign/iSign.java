@@ -546,24 +546,26 @@ public class iSign extends JFrame {
             }
         });
 
+        
         n2_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
         n2_b.setText("3");
         n2_b.setSize(new java.awt.Dimension(100, 100));
         n2_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                n2_bActionPerformed(evt);
+                n3_bActionPerformed(evt);
             }
         });
 
+        
         n3_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
         n3_b.setText("2");
         n3_b.setSize(new java.awt.Dimension(100, 100));
         n3_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                n3_bActionPerformed(evt);
+                n2_bActionPerformed(evt);
             }
         });
-
+        
         n4_b.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
         n4_b.setText("4");
         n4_b.setSize(new java.awt.Dimension(100, 100));
@@ -1064,19 +1066,45 @@ public class iSign extends JFrame {
 
     private void I_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_I_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/I.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("I");
+    	
     }//GEN-LAST:event_I_bActionPerformed
 
     private void H_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H_bActionPerformed
         // TODO add your handling code here:
+    	 s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/H.png")));
+    	    s1_prompt_l.setText(ToBeStartedMSG);
+    	    s1_tick_image.setVisible(false);
+    	    
+    	    RC = new RecognizeChar();
+    	    RC.CollectSample("H");
     }//GEN-LAST:event_H_bActionPerformed
-
+   
     private void G_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/G.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("G");
     }//GEN-LAST:event_G_bActionPerformed
-
+    
     private void F_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F_bActionPerformed
         // TODO add your handling code here:
+    	 s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/F.png")));
+    	    s1_prompt_l.setText(ToBeStartedMSG);
+    	    s1_tick_image.setVisible(false);
+    	    
+    	    RC = new RecognizeChar();
+    	    RC.CollectSample("F");
     }//GEN-LAST:event_F_bActionPerformed
+   
 
     private void E_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E_bActionPerformed
         // TODO add your handling code here:
@@ -1132,40 +1160,94 @@ public class iSign extends JFrame {
 
     private void n1_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/1.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("1");
     }//GEN-LAST:event_n1_bActionPerformed
-
+    
     private void n2_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/2.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("2");
     }//GEN-LAST:event_n2_bActionPerformed
-
+    
     private void n3_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n3_bActionPerformed
         // TODO add your handling code here:
+    	 s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/3.png")));
+    	    s1_prompt_l.setText(ToBeStartedMSG);
+    	    s1_tick_image.setVisible(false);
+    	    
+    	    RC = new RecognizeChar();
+    	    RC.CollectSample("3");
     }//GEN-LAST:event_n3_bActionPerformed
-
+   
     private void n4_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n4_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/4.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("4");
     }//GEN-LAST:event_n4_bActionPerformed
-
+    
     private void n5_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n5_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/5.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("5");
     }//GEN-LAST:event_n5_bActionPerformed
-
+    
     private void n6_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n6_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/6.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("6");
     }//GEN-LAST:event_n6_bActionPerformed
-
+    
     private void n7_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n7_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/7.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("7");
     }//GEN-LAST:event_n7_bActionPerformed
-
+    
     private void n8_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n8_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/8.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("8");
     }//GEN-LAST:event_n8_bActionPerformed
-
+    
     private void n9_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n9_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/9.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        
+        RC = new RecognizeChar();
+        RC.CollectSample("9");
     }//GEN-LAST:event_n9_bActionPerformed
-
+    
     private void n10_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n10_bActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_n10_bActionPerformed
@@ -1176,26 +1258,62 @@ public class iSign extends JFrame {
 
     private void you_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_you_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/you.png")));
+	    s1_prompt_l.setText(ToBeStartedMSG);
+	    s1_tick_image.setVisible(false);
+	    
+	    RC = new RecognizeChar();
+	    RC.CollectSample("you");
     }//GEN-LAST:event_you_bActionPerformed
 
     private void see_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_see_bActionPerformed
         // TODO add your handling code here:
+    	s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/see.png")));
+	    s1_prompt_l.setText(ToBeStartedMSG);
+	    s1_tick_image.setVisible(false);
+	    
+	    RC = new RecognizeChar();
+	    RC.CollectSample("see");
     }//GEN-LAST:event_see_bActionPerformed
-
+   
     private void fine_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fine_bActionPerformed
         // TODO add your handling code here:
+    	 s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/fine.png")));
+    	    s1_prompt_l.setText(ToBeStartedMSG);
+    	    s1_tick_image.setVisible(false);
+    	    
+    	    RC = new RecognizeChar();
+    	    RC.CollectSample("fine");
     }//GEN-LAST:event_fine_bActionPerformed
-
+   
     private void tomorrow_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tomorrow_bActionPerformed
         // TODO add your handling code here:
+    	 s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tomorrow.png")));
+ 	    s1_prompt_l.setText(ToBeStartedMSG);
+ 	    s1_tick_image.setVisible(false);
+ 	    
+ 	    RC = new RecognizeChar();
+ 	    RC.CollectSample("tomorrow");
     }//GEN-LAST:event_tomorrow_bActionPerformed
 
     private void me_too_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_me_too_bActionPerformed
         // TODO add your handling code here:
+    	 s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/me_too.png")));
+ 	    s1_prompt_l.setText(ToBeStartedMSG);
+ 	    s1_tick_image.setVisible(false);
+ 	    
+ 	    RC = new RecognizeChar();
+ 	    RC.CollectSample("me_too");
     }//GEN-LAST:event_me_too_bActionPerformed
 
     private void hold_on_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hold_on_bActionPerformed
         // TODO add your handling code here:
+    	 s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/hold_on.png")));
+  	    s1_prompt_l.setText(ToBeStartedMSG);
+  	    s1_tick_image.setVisible(false);
+  	    
+  	    RC = new RecognizeChar();
+  	    RC.CollectSample("hold_on");
     }//GEN-LAST:event_hold_on_bActionPerformed
 
     private void hello_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hello_bActionPerformed
