@@ -8,17 +8,28 @@
  */
 package isign;
 
-/**
- *
- * @author Mavis
- */
-public class iSign extends javax.swing.JFrame {
+import javax.swing.JButton;
+
+//import Service.RecognizeChar;
+
+import java.awt.Toolkit;
+
+import javax.swing.*;
+
+public class iSign extends JFrame {
+	
+	public static String ToBeStartedMSG = "Follow the instruction in the left";
+	public static String SuccessMSG = "Yes! You did it!";
+    //public RecognizeChar RC;
 
     /**
      * Creates new form iSign
      */
     public iSign() {
         initComponents();
+        int Pos_w = (Toolkit.getDefaultToolkit().getScreenSize().width - 1000) / 2;
+		int Pos_h = (Toolkit.getDefaultToolkit().getScreenSize().height - 900) / 2;
+		setLocation(Pos_w, Pos_h);
     }
 
     /**
@@ -103,7 +114,25 @@ public class iSign extends javax.swing.JFrame {
         s2_back_b = new javax.swing.JButton();
         background2 = new javax.swing.JLabel();
         s3_panel = new javax.swing.JPanel();
+        Sym_choose_p1 = new javax.swing.JTabbedPane();
+        Num_p2 = new javax.swing.JPanel();
+        n1_b2 = new javax.swing.JButton();
+        n2_b2 = new javax.swing.JButton();
+        n3_b2 = new javax.swing.JButton();
+        n4_b2 = new javax.swing.JButton();
+        n5_b2 = new javax.swing.JButton();
+        n6_b2 = new javax.swing.JButton();
+        n9_b2 = new javax.swing.JButton();
+        n10_b2 = new javax.swing.JButton();
+        s1_prompt_l1 = new javax.swing.JLabel();
+        sentence_p = new javax.swing.JPanel();
+        w1_l = new javax.swing.JLabel();
+        w2_l = new javax.swing.JLabel();
+        w3_l = new javax.swing.JLabel();
+        bg_blanks = new javax.swing.JLabel();
         s3_back_b = new javax.swing.JButton();
+        s3_back_b2 = new javax.swing.JButton();
+        s3_back_b1 = new javax.swing.JButton();
         background3 = new javax.swing.JLabel();
 
         jButton13.setText("jButton4");
@@ -871,16 +900,202 @@ public class iSign extends javax.swing.JFrame {
 
         root.add(s2_panel, "card4");
 
+        s3_panel.setOpaque(false);
         s3_panel.setLayout(null);
 
-        s3_back_b.setText("jButton3");
+        Sym_choose_p1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Please choose a sentence to practice with", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Malayalam MN", 0, 18), new java.awt.Color(255, 204, 51))); // NOI18N
+
+        Num_p2.setPreferredSize(new java.awt.Dimension(900, 220));
+
+        n1_b2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        n1_b2.setText("I Am fine");
+        n1_b2.setSize(new java.awt.Dimension(100, 100));
+        n1_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n1_b2ActionPerformed(evt);
+            }
+        });
+
+        n2_b2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        n2_b2.setText("HOw old are you");
+        n2_b2.setSize(new java.awt.Dimension(100, 100));
+        n2_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n2_b2ActionPerformed(evt);
+            }
+        });
+
+        n3_b2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        n3_b2.setText("I love you");
+        n3_b2.setSize(new java.awt.Dimension(100, 100));
+        n3_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n3_b2ActionPerformed(evt);
+            }
+        });
+
+        n4_b2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        n4_b2.setText("See you tomorrow");
+        n4_b2.setSize(new java.awt.Dimension(100, 100));
+        n4_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n4_b2ActionPerformed(evt);
+            }
+        });
+
+        n5_b2.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n5_b2.setText("5");
+        n5_b2.setSize(new java.awt.Dimension(100, 100));
+        n5_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n5_b2ActionPerformed(evt);
+            }
+        });
+
+        n6_b2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        n6_b2.setText("What time is it");
+        n6_b2.setSize(new java.awt.Dimension(100, 100));
+        n6_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n6_b2ActionPerformed(evt);
+            }
+        });
+
+        n9_b2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        n9_b2.setText("Thank you");
+        n9_b2.setSize(new java.awt.Dimension(100, 100));
+        n9_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n9_b2ActionPerformed(evt);
+            }
+        });
+
+        n10_b2.setFont(new java.awt.Font("Phosphate", 1, 40)); // NOI18N
+        n10_b2.setText("10");
+        n10_b2.setSize(new java.awt.Dimension(100, 100));
+        n10_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n10_b2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Num_p2Layout = new javax.swing.GroupLayout(Num_p2);
+        Num_p2.setLayout(Num_p2Layout);
+        Num_p2Layout.setHorizontalGroup(
+            Num_p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Num_p2Layout.createSequentialGroup()
+                .addGroup(Num_p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(Num_p2Layout.createSequentialGroup()
+                        .addComponent(n1_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(n4_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(n3_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Num_p2Layout.createSequentialGroup()
+                        .addComponent(n2_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(n6_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(n9_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(111, 111, 111)
+                .addComponent(n10_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(n5_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Num_p2Layout.setVerticalGroup(
+            Num_p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Num_p2Layout.createSequentialGroup()
+                .addGroup(Num_p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(n1_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n4_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n3_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Num_p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(n5_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Num_p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(n2_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(n6_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(n9_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Num_p2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(n10_b2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        Sym_choose_p1.addTab("Sentences", Num_p2);
+
+        s3_panel.add(Sym_choose_p1);
+        Sym_choose_p1.setBounds(40, 50, 950, 220);
+
+        s1_prompt_l1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
+        s1_prompt_l1.setForeground(new java.awt.Color(255, 204, 0));
+        s1_prompt_l1.setText("jLabel1");
+        s3_panel.add(s1_prompt_l1);
+        s1_prompt_l1.setBounds(790, 360, 110, 50);
+
+        sentence_p.setLayout(null);
+
+        w1_l.setFont(new java.awt.Font("Malayalam MN", 1, 36)); // NOI18N
+        w1_l.setForeground(new java.awt.Color(255, 204, 51));
+        w1_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        w1_l.setText("I");
+        w1_l.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 204, 51)));
+        sentence_p.add(w1_l);
+        w1_l.setBounds(0, 0, 200, 200);
+
+        w2_l.setFont(new java.awt.Font("Malayalam MN", 1, 36)); // NOI18N
+        w2_l.setForeground(new java.awt.Color(255, 204, 51));
+        w2_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        w2_l.setText("FINE");
+        w2_l.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 204, 51)));
+        sentence_p.add(w2_l);
+        w2_l.setBounds(200, 0, 200, 200);
+
+        w3_l.setFont(new java.awt.Font("Malayalam MN", 1, 36)); // NOI18N
+        w3_l.setForeground(new java.awt.Color(255, 204, 51));
+        w3_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        w3_l.setText("I");
+        w3_l.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 204, 51)));
+        sentence_p.add(w3_l);
+        w3_l.setBounds(400, 0, 200, 200);
+
+        bg_blanks.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        bg_blanks.setForeground(new java.awt.Color(255, 204, 51));
+        bg_blanks.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/bg2.jpg"))); // NOI18N
+        bg_blanks.setText("jLabel1");
+        sentence_p.add(bg_blanks);
+        bg_blanks.setBounds(0, 0, 600, 200);
+
+        s3_panel.add(sentence_p);
+        sentence_p.setBounds(70, 320, 600, 200);
+
+        s3_back_b.setText("Back");
         s3_back_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 s3_back_bActionPerformed(evt);
             }
         });
         s3_panel.add(s3_back_b);
-        s3_back_b.setBounds(40, 560, 97, 29);
+        s3_back_b.setBounds(870, 570, 75, 29);
+
+        s3_back_b2.setText("Answer");
+        s3_back_b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s3_back_b2ActionPerformed(evt);
+            }
+        });
+        s3_panel.add(s3_back_b2);
+        s3_back_b2.setBounds(800, 570, 75, 30);
+
+        s3_back_b1.setText("Test");
+        s3_back_b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s3_back_b1ActionPerformed(evt);
+            }
+        });
+        s3_panel.add(s3_back_b1);
+        s3_back_b1.setBounds(730, 570, 75, 29);
 
         background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
         background3.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -928,6 +1143,19 @@ public class iSign extends javax.swing.JFrame {
         cl.first(root);        // TODO add your handling code here:
     }//GEN-LAST:event_s1_back_bActionPerformed
 
+    private void s1_perf_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s1_perf_bActionPerformed
+        // TODO add your handling code here:
+    	try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	//RC.ReadSign();   
+    	//s1_tick_image.setVisible(true);
+    	s1_prompt_l.setText(SuccessMSG);
+    }//GEN-LAST:event_s1_perf_bActionPerformed
+    
     private void s2_go_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_go_bActionPerformed
         java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
         cl.show(root,"card4");// TODO add your handling code here:
@@ -1034,22 +1262,54 @@ public class iSign extends javax.swing.JFrame {
 
     private void E_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E_bActionPerformed
         // TODO add your handling code here:
+    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/E.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        //s1_tick_image.setVisible(false);
+        
+        //RC = new RecognizeChar();
+        //RC.CollectSample("E");
     }//GEN-LAST:event_E_bActionPerformed
 
     private void D_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D_bActionPerformed
         // TODO add your handling code here:
+    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/D.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        //s1_tick_image.setVisible(false);
+        
+        //RC = new RecognizeChar();
+        //RC.CollectSample("D");
     }//GEN-LAST:event_D_bActionPerformed
 
     private void C_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_bActionPerformed
         // TODO add your handling code here:
+    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/C.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        //s1_tick_image.setVisible(false);
+        
+        //RC = new RecognizeChar();
+        //RC.CollectSample("C");
     }//GEN-LAST:event_C_bActionPerformed
 
     private void B_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_bActionPerformed
         // TODO add your handling code here:
+    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/B.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        //s1_tick_image.setVisible(false);
+        
+        //RC = new RecognizeChar();
+        //RC.CollectSample("B");
     }//GEN-LAST:event_B_bActionPerformed
 
     private void A_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_bActionPerformed
         // TODO add your handling code here:
+    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/A.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        //s1_tick_image.setVisible(false);
+        
+        //RC = new RecognizeChar();
+        //RC.CollectSample("A");
+        //RC.ReadSign();
+        //s1_prompt_l.setText(SuccessMSG);
     }//GEN-LAST:event_A_bActionPerformed
 
     private void n1_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_bActionPerformed
@@ -1140,6 +1400,46 @@ public class iSign extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_yes_bActionPerformed
 
+    private void n1_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n1_b2ActionPerformed
+
+    private void n2_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n2_b2ActionPerformed
+
+    private void n3_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n3_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n3_b2ActionPerformed
+
+    private void n4_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n4_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n4_b2ActionPerformed
+
+    private void n5_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n5_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n5_b2ActionPerformed
+
+    private void n6_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n6_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n6_b2ActionPerformed
+
+    private void n9_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n9_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n9_b2ActionPerformed
+
+    private void n10_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n10_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n10_b2ActionPerformed
+
+    private void s3_back_b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_b1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s3_back_b1ActionPerformed
+
+    private void s3_back_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_b2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s3_back_b2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1193,12 +1493,14 @@ public class iSign extends javax.swing.JFrame {
     private javax.swing.JButton M_b;
     private javax.swing.JButton N_b;
     private javax.swing.JPanel Num_p;
+    private javax.swing.JPanel Num_p2;
     private javax.swing.JButton O_b;
     private javax.swing.JButton P_b;
     private javax.swing.JButton Q_b;
     private javax.swing.JButton R_b;
     private javax.swing.JButton S_b;
     private javax.swing.JTabbedPane Sym_choose_p;
+    private javax.swing.JTabbedPane Sym_choose_p1;
     private javax.swing.JButton T_S;
     private javax.swing.JButton U_b;
     private javax.swing.JButton U_b2;
@@ -1210,6 +1512,7 @@ public class iSign extends javax.swing.JFrame {
     private javax.swing.JLabel background1;
     private javax.swing.JLabel background2;
     private javax.swing.JLabel background3;
+    private javax.swing.JLabel bg_blanks;
     private javax.swing.JButton bye_b;
     private javax.swing.JButton fine_b;
     private javax.swing.JButton hello_b;
@@ -1219,33 +1522,48 @@ public class iSign extends javax.swing.JFrame {
     private javax.swing.JButton love_b;
     private javax.swing.JButton me_too_b;
     private javax.swing.JButton n10_b;
+    private javax.swing.JButton n10_b2;
     private javax.swing.JButton n1_b;
+    private javax.swing.JButton n1_b2;
     private javax.swing.JButton n2_b;
+    private javax.swing.JButton n2_b2;
     private javax.swing.JButton n3_b;
+    private javax.swing.JButton n3_b2;
     private javax.swing.JButton n4_b;
+    private javax.swing.JButton n4_b2;
     private javax.swing.JButton n5_b;
+    private javax.swing.JButton n5_b2;
     private javax.swing.JButton n6_b;
+    private javax.swing.JButton n6_b2;
     private javax.swing.JButton n7_b;
     private javax.swing.JButton n8_b;
     private javax.swing.JButton n9_b;
+    private javax.swing.JButton n9_b2;
     private javax.swing.JPanel root;
     private javax.swing.JButton s1_back_b;
     private javax.swing.JButton s1_go_b;
     private javax.swing.JLabel s1_info_l;
     private javax.swing.JPanel s1_panel;
     private javax.swing.JLabel s1_prompt_l;
+    private javax.swing.JLabel s1_prompt_l1;
     private javax.swing.JPanel s1_sym_hint_p;
     private javax.swing.JButton s2_back_b;
     private javax.swing.JButton s2_go_b;
     private javax.swing.JLabel s2_info_l;
     private javax.swing.JPanel s2_panel;
     private javax.swing.JButton s3_back_b;
+    private javax.swing.JButton s3_back_b1;
+    private javax.swing.JButton s3_back_b2;
     private javax.swing.JButton s3_go_b;
     private javax.swing.JLabel s3_info_l;
     private javax.swing.JPanel s3_panel;
     private javax.swing.JButton see_b;
+    private javax.swing.JPanel sentence_p;
     private javax.swing.JButton sorry_b;
     private javax.swing.JButton tomorrow_b;
+    private javax.swing.JLabel w1_l;
+    private javax.swing.JLabel w2_l;
+    private javax.swing.JLabel w3_l;
     private javax.swing.JLabel welcome_l;
     private javax.swing.JPanel word_p;
     private javax.swing.JButton yes_b;
