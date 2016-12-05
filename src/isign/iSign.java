@@ -1,7 +1,7 @@
 /*2
-*/
+ */
 
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -10,17 +10,20 @@ package isign;
 
 import javax.swing.JButton;
 
-//import Service.RecognizeChar;
+import Service.RecognizeChar;
+import Service.RecognizeSentence;
 
 import java.awt.Toolkit;
 
 import javax.swing.*;
 
 public class iSign extends JFrame {
-	
-	public static String ToBeStartedMSG = "Follow the instruction in the left";
-	public static String SuccessMSG = "Yes! You did it!";
-    //public RecognizeChar RC;
+
+    public static String ToBeStartedMSG = "Follow the instruction in the left";
+    public static String SuccessMSG = "Yes! You did it!";
+    
+    public RecognizeChar RC;
+    public RecognizeSentence RS;
 
     /**
      * Creates new form iSign
@@ -28,8 +31,8 @@ public class iSign extends JFrame {
     public iSign() {
         initComponents();
         int Pos_w = (Toolkit.getDefaultToolkit().getScreenSize().width - 1000) / 2;
-		int Pos_h = (Toolkit.getDefaultToolkit().getScreenSize().height - 900) / 2;
-		setLocation(Pos_w, Pos_h);
+        int Pos_h = (Toolkit.getDefaultToolkit().getScreenSize().height - 900) / 2;
+        setLocation(Pos_w, Pos_h);
     }
 
     /**
@@ -111,8 +114,37 @@ public class iSign extends JFrame {
         s1_back_b = new javax.swing.JButton();
         background1 = new javax.swing.JLabel();
         s2_panel = new javax.swing.JPanel();
+        s2_home = new javax.swing.JPanel();
+        s2_go_quiz = new javax.swing.JButton();
+        s2_go_summary = new javax.swing.JButton();
+        s2_quiz_info_l = new javax.swing.JLabel();
+        s2_summary_info_l = new javax.swing.JLabel();
         s2_back_b = new javax.swing.JButton();
         background2 = new javax.swing.JLabel();
+        s2_quiz = new javax.swing.JPanel();
+        quiz_choose_p = new javax.swing.JTabbedPane();
+        quiz = new javax.swing.JPanel();
+        quiz1_b = new javax.swing.JButton();
+        quiz2_b = new javax.swing.JButton();
+        quiz_prob_frame = new javax.swing.JPanel();
+        quiz_prob1 = new javax.swing.JLabel();
+        quiz_answer_prob = new javax.swing.JPanel();
+        quiz_answer = new javax.swing.JLabel();
+        quiz_back_b = new javax.swing.JButton();
+        quiz_answer_b = new javax.swing.JButton();
+        quiz_test_b = new javax.swing.JButton();
+        quiz_prompt_l = new javax.swing.JLabel();
+        background4 = new javax.swing.JLabel();
+        s2_summary = new javax.swing.JPanel();
+        curve = new javax.swing.JLabel();
+        c1 = new javax.swing.JLabel();
+        c2 = new javax.swing.JLabel();
+        c3 = new javax.swing.JLabel();
+        c4 = new javax.swing.JLabel();
+        c5 = new javax.swing.JLabel();
+        c6 = new javax.swing.JLabel();
+        summary_back_b = new javax.swing.JButton();
+        background5 = new javax.swing.JLabel();
         s3_panel = new javax.swing.JPanel();
         Sym_choose_p1 = new javax.swing.JTabbedPane();
         Num_p2 = new javax.swing.JPanel();
@@ -881,22 +913,222 @@ public class iSign extends JFrame {
 
         root.add(s1_panel, "card3");
 
-        s2_panel.setLayout(null);
+        s2_panel.setLayout(new java.awt.CardLayout());
 
-        s2_back_b.setText("jButton2");
+        s2_home.setLayout(null);
+
+        s2_go_quiz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/content.png"))); // NOI18N
+        s2_go_quiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s2_go_quizActionPerformed(evt);
+            }
+        });
+        s2_home.add(s2_go_quiz);
+        s2_go_quiz.setBounds(170, 130, 280, 310);
+
+        s2_go_summary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/analysis.png"))); // NOI18N
+        s2_go_summary.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s2_go_summaryActionPerformed(evt);
+            }
+        });
+        s2_home.add(s2_go_summary);
+        s2_go_summary.setBounds(574, 130, 280, 310);
+
+        s2_quiz_info_l.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
+        s2_quiz_info_l.setForeground(new java.awt.Color(255, 255, 255));
+        s2_quiz_info_l.setText("Quiz");
+        s2_home.add(s2_quiz_info_l);
+        s2_quiz_info_l.setBounds(280, 450, 60, 40);
+
+        s2_summary_info_l.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
+        s2_summary_info_l.setForeground(new java.awt.Color(255, 255, 255));
+        s2_summary_info_l.setText("Summary");
+        s2_home.add(s2_summary_info_l);
+        s2_summary_info_l.setBounds(670, 450, 120, 40);
+
+        s2_back_b.setText("Back");
         s2_back_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 s2_back_bActionPerformed(evt);
             }
         });
-        s2_panel.add(s2_back_b);
-        s2_back_b.setBounds(50, 550, 97, 29);
+        s2_home.add(s2_back_b);
+        s2_back_b.setBounds(850, 570, 97, 29);
 
         background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
         background2.setPreferredSize(new java.awt.Dimension(1024, 700));
         background2.setRequestFocusEnabled(false);
-        s2_panel.add(background2);
+        s2_home.add(background2);
         background2.setBounds(0, 0, 3000, 1800);
+
+        s2_panel.add(s2_home, "s2_home");
+
+        s2_quiz.setLayout(null);
+
+        quiz_choose_p.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Please choose a quiz to answer", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Malayalam MN", 0, 18), new java.awt.Color(255, 204, 51))); // NOI18N
+
+        quiz.setPreferredSize(new java.awt.Dimension(900, 220));
+
+        quiz1_b.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        quiz1_b.setText("QUIZ 1");
+        quiz1_b.setSize(new java.awt.Dimension(100, 100));
+        quiz1_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quiz1_bActionPerformed(evt);
+            }
+        });
+
+        quiz2_b.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
+        quiz2_b.setText("Quiz 2");
+        quiz2_b.setSize(new java.awt.Dimension(100, 100));
+        quiz2_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quiz2_bActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout quizLayout = new javax.swing.GroupLayout(quiz);
+        quiz.setLayout(quizLayout);
+        quizLayout.setHorizontalGroup(
+            quizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(quizLayout.createSequentialGroup()
+                .addGroup(quizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(quiz2_b, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+                    .addComponent(quiz1_b, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(550, Short.MAX_VALUE))
+        );
+        quizLayout.setVerticalGroup(
+            quizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(quizLayout.createSequentialGroup()
+                .addComponent(quiz1_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quiz2_b, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        quiz_choose_p.addTab("Quiz", quiz);
+
+        s2_quiz.add(quiz_choose_p);
+        quiz_choose_p.setBounds(40, 50, 950, 220);
+
+        quiz_prob_frame.setLayout(null);
+
+        quiz_prob1.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        quiz_prob1.setForeground(new java.awt.Color(255, 204, 51));
+        quiz_prob1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/quiz1.png"))); // NOI18N
+        quiz_prob_frame.add(quiz_prob1);
+        quiz_prob1.setBounds(0, 0, 400, 147);
+
+        s2_quiz.add(quiz_prob_frame);
+        quiz_prob_frame.setBounds(70, 320, 400, 147);
+
+        quiz_answer_prob.setLayout(null);
+
+        quiz_answer.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        quiz_answer.setForeground(new java.awt.Color(255, 204, 51));
+        quiz_answer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/answer1.png"))); // NOI18N
+        quiz_answer_prob.add(quiz_answer);
+        quiz_answer.setBounds(0, 0, 147, 147);
+
+        s2_quiz.add(quiz_answer_prob);
+        quiz_answer_prob.setBounds(500, 320, 147, 147);
+
+        quiz_back_b.setText("back");
+        quiz_back_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quiz_back_bActionPerformed(evt);
+            }
+        });
+        s2_quiz.add(quiz_back_b);
+        quiz_back_b.setBounds(880, 560, 97, 29);
+
+        quiz_answer_b.setText("answer");
+        quiz_answer_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quiz_answer_bActionPerformed(evt);
+            }
+        });
+        s2_quiz.add(quiz_answer_b);
+        quiz_answer_b.setBounds(680, 560, 97, 29);
+
+        quiz_test_b.setText("test");
+        s2_quiz.add(quiz_test_b);
+        quiz_test_b.setBounds(780, 560, 97, 29);
+
+        quiz_prompt_l.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
+        quiz_prompt_l.setForeground(new java.awt.Color(255, 204, 0));
+        quiz_prompt_l.setText("jLabel1");
+        s2_quiz.add(quiz_prompt_l);
+        quiz_prompt_l.setBounds(780, 340, 110, 50);
+
+        background4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
+        background4.setPreferredSize(new java.awt.Dimension(1024, 700));
+        background4.setRequestFocusEnabled(false);
+        s2_quiz.add(background4);
+        background4.setBounds(0, 0, 3000, 1800);
+
+        s2_panel.add(s2_quiz, "s2_quiz");
+
+        s2_summary.setLayout(null);
+
+        curve.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/curve.png"))); // NOI18N
+        curve.setPreferredSize(new java.awt.Dimension(900, 450));
+        s2_summary.add(curve);
+        curve.setBounds(40, 190, 900, 450);
+
+        c1.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        c1.setForeground(new java.awt.Color(255, 153, 51));
+        c1.setText("A-Z");
+        s2_summary.add(c1);
+        c1.setBounds(180, 90, 30, 20);
+
+        c2.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        c2.setForeground(new java.awt.Color(255, 153, 51));
+        c2.setText("1-6");
+        s2_summary.add(c2);
+        c2.setBounds(180, 120, 30, 20);
+
+        c3.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        c3.setForeground(new java.awt.Color(255, 153, 51));
+        c3.setText("7");
+        s2_summary.add(c3);
+        c3.setBounds(270, 90, 30, 20);
+
+        c4.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        c4.setForeground(new java.awt.Color(255, 153, 51));
+        c4.setText("     words");
+        s2_summary.add(c4);
+        c4.setBounds(140, 170, 110, 20);
+
+        c5.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        c5.setForeground(new java.awt.Color(255, 153, 51));
+        c5.setText("9");
+        s2_summary.add(c5);
+        c5.setBounds(190, 150, 30, 20);
+
+        c6.setFont(new java.awt.Font("Malayalam MN", 0, 18)); // NOI18N
+        c6.setForeground(new java.awt.Color(255, 153, 51));
+        c6.setText("8");
+        s2_summary.add(c6);
+        c6.setBounds(270, 110, 30, 20);
+
+        summary_back_b.setText("back");
+        summary_back_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                summary_back_bActionPerformed(evt);
+            }
+        });
+        s2_summary.add(summary_back_b);
+        summary_back_b.setBounds(880, 600, 97, 29);
+
+        background5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/background.png"))); // NOI18N
+        background5.setPreferredSize(new java.awt.Dimension(1024, 700));
+        background5.setRequestFocusEnabled(false);
+        s2_summary.add(background5);
+        background5.setBounds(0, 0, 3000, 1800);
+
+        s2_panel.add(s2_summary, "s2_summary");
 
         root.add(s2_panel, "card4");
 
@@ -1133,46 +1365,47 @@ public class iSign extends JFrame {
 
     private void s1_go_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s1_go_bActionPerformed
 
-        java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
-        cl.show(root,"card3");
+        java.awt.CardLayout cl = (java.awt.CardLayout) (root.getLayout());
+        cl.show(root, "card3");
         // TODO add your handling code here:
     }//GEN-LAST:event_s1_go_bActionPerformed
 
     private void s1_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s1_back_bActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
+        java.awt.CardLayout cl = (java.awt.CardLayout) (root.getLayout());
         cl.first(root);        // TODO add your handling code here:
     }//GEN-LAST:event_s1_back_bActionPerformed
 
     private void s1_perf_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s1_perf_bActionPerformed
         // TODO add your handling code here:
-    	try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	//RC.ReadSign();   
-    	//s1_tick_image.setVisible(true);
-    	s1_prompt_l.setText(SuccessMSG);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+        RC.ReadSign(true);   
+        s1_tick_image.setVisible(true);
+        s1_prompt_l.setText(SuccessMSG);
     }//GEN-LAST:event_s1_perf_bActionPerformed
-    
+
     private void s2_go_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_go_bActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
-        cl.show(root,"card4");// TODO add your handling code here:
+        java.awt.CardLayout cl = (java.awt.CardLayout) (root.getLayout());
+        cl.show(root, "card4");// TODO add your handling code here:
     }//GEN-LAST:event_s2_go_bActionPerformed
 
     private void s3_go_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_go_bActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
-        cl.show(root,"card5");// TODO add your handling code here:
+        java.awt.CardLayout cl = (java.awt.CardLayout) (root.getLayout());
+        cl.show(root, "card5");// TODO add your handling code here:
     }//GEN-LAST:event_s3_go_bActionPerformed
 
     private void s2_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_back_bActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
+        java.awt.CardLayout cl = (java.awt.CardLayout) (root.getLayout());
         cl.first(root);// TODO add your handling code here:        // TODO add your handling code here:
     }//GEN-LAST:event_s2_back_bActionPerformed
 
     private void s3_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_bActionPerformed
-        java.awt.CardLayout cl = (java.awt.CardLayout)(root.getLayout());
+        java.awt.CardLayout cl = (java.awt.CardLayout) (root.getLayout());
         cl.first(root);// TODO add your handling code here:
     }//GEN-LAST:event_s3_back_bActionPerformed
 
@@ -1246,106 +1479,168 @@ public class iSign extends JFrame {
 
     private void I_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_I_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/I.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("I");
+
     }//GEN-LAST:event_I_bActionPerformed
 
     private void H_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/H.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("H");
     }//GEN-LAST:event_H_bActionPerformed
 
     private void G_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/G.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("G");
     }//GEN-LAST:event_G_bActionPerformed
 
     private void F_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/F.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("F");
     }//GEN-LAST:event_F_bActionPerformed
+
 
     private void E_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E_bActionPerformed
         // TODO add your handling code here:
-    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/E.png")));
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/E.png")));
         s1_prompt_l.setText(ToBeStartedMSG);
-        //s1_tick_image.setVisible(false);
-        
-        //RC = new RecognizeChar();
-        //RC.CollectSample("E");
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("E");
     }//GEN-LAST:event_E_bActionPerformed
 
     private void D_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D_bActionPerformed
         // TODO add your handling code here:
-    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/D.png")));
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/D.png")));
         s1_prompt_l.setText(ToBeStartedMSG);
-        //s1_tick_image.setVisible(false);
-        
-        //RC = new RecognizeChar();
-        //RC.CollectSample("D");
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("D");
     }//GEN-LAST:event_D_bActionPerformed
 
     private void C_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_bActionPerformed
         // TODO add your handling code here:
-    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/C.png")));
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/C.png")));
         s1_prompt_l.setText(ToBeStartedMSG);
-        //s1_tick_image.setVisible(false);
-        
-        //RC = new RecognizeChar();
-        //RC.CollectSample("C");
+        s1_tick_image.setVisible(false); 
+        RC = new RecognizeChar();
+        RC.CollectSample("C");
     }//GEN-LAST:event_C_bActionPerformed
 
     private void B_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_bActionPerformed
         // TODO add your handling code here:
-    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/B.png")));
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/B.png")));
         s1_prompt_l.setText(ToBeStartedMSG);
-        //s1_tick_image.setVisible(false);
-        
-        //RC = new RecognizeChar();
-        //RC.CollectSample("B");
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("B");
     }//GEN-LAST:event_B_bActionPerformed
 
     private void A_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_bActionPerformed
         // TODO add your handling code here:
-    	//s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/A.png")));
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/A.png")));
         s1_prompt_l.setText(ToBeStartedMSG);
-        //s1_tick_image.setVisible(false);
-        
-        //RC = new RecognizeChar();
-        //RC.CollectSample("A");
-        //RC.ReadSign();
-        //s1_prompt_l.setText(SuccessMSG);
+        s1_tick_image.setVisible(false); 
+        RC = new RecognizeChar();
+        RC.CollectSample("A");
+        RC.ReadSign();
+        s1_prompt_l.setText(SuccessMSG);
     }//GEN-LAST:event_A_bActionPerformed
 
     private void n1_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/1.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);  
+        RC = new RecognizeChar();
+        RC.CollectSample("1");
     }//GEN-LAST:event_n1_bActionPerformed
 
     private void n2_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/2.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);    
+        RC = new RecognizeChar();
+        RC.CollectSample("2");
     }//GEN-LAST:event_n2_bActionPerformed
 
     private void n3_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n3_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/3.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("3");
     }//GEN-LAST:event_n3_bActionPerformed
 
     private void n4_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n4_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/4.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("4");
     }//GEN-LAST:event_n4_bActionPerformed
 
     private void n5_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n5_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/5.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("5");
     }//GEN-LAST:event_n5_bActionPerformed
 
     private void n6_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n6_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/6.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("6");
     }//GEN-LAST:event_n6_bActionPerformed
 
     private void n7_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n7_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/7.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("7");
     }//GEN-LAST:event_n7_bActionPerformed
 
     private void n8_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n8_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/8.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("8");
     }//GEN-LAST:event_n8_bActionPerformed
 
     private void n9_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n9_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/9.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("9");
     }//GEN-LAST:event_n9_bActionPerformed
 
     private void n10_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n10_bActionPerformed
@@ -1358,26 +1653,56 @@ public class iSign extends JFrame {
 
     private void you_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_you_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/you.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("you");
     }//GEN-LAST:event_you_bActionPerformed
 
     private void see_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_see_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/see.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("see");
     }//GEN-LAST:event_see_bActionPerformed
 
     private void fine_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fine_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/fine.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("fine");
     }//GEN-LAST:event_fine_bActionPerformed
 
     private void tomorrow_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tomorrow_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tomorrow.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("tomorrow");
     }//GEN-LAST:event_tomorrow_bActionPerformed
 
     private void me_too_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_me_too_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/me_too.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("me_too");
     }//GEN-LAST:event_me_too_bActionPerformed
 
     private void hold_on_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hold_on_bActionPerformed
         // TODO add your handling code here:
+        s1_sym_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/hold_on.png")));
+        s1_prompt_l.setText(ToBeStartedMSG);
+        s1_tick_image.setVisible(false);
+        RC = new RecognizeChar();
+        RC.CollectSample("hold_on");
     }//GEN-LAST:event_hold_on_bActionPerformed
 
     private void hello_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hello_bActionPerformed
@@ -1402,6 +1727,17 @@ public class iSign extends JFrame {
 
     private void n1_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1_b2ActionPerformed
         // TODO add your handling code here:
+        w1_l.setText("I");
+        w2_l.setText("FINE");
+        w3_l.setText("I");
+        w1_l.setIcon(null);
+        w2_l.setIcon(null);
+        w3_l.setIcon(null);
+        w3_l.setFont(new java.awt.Font("Malayalam MN", 1, 36));
+        sentence_p.setVisible(true);  	
+        RS = new RecognizeSentence();
+        //test
+        RS.CollectSampleSent("A C A");
     }//GEN-LAST:event_n1_b2ActionPerformed
 
     private void n2_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2_b2ActionPerformed
@@ -1414,6 +1750,16 @@ public class iSign extends JFrame {
 
     private void n4_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n4_b2ActionPerformed
         // TODO add your handling code here:
+        w1_l.setText("SEE");
+        w2_l.setText("YOU");
+        w3_l.setText("TOMORROW");
+        w1_l.setIcon(null);
+        w2_l.setIcon(null);
+        w3_l.setIcon(null);
+        w3_l.setFont(new java.awt.Font("Malayalam MN", 1, 24));
+        sentence_p.setVisible(true);
+        RS = new RecognizeSentence();
+        RS.CollectSampleSent("See you tomorrow");
     }//GEN-LAST:event_n4_b2ActionPerformed
 
     private void n5_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n5_b2ActionPerformed
@@ -1434,11 +1780,102 @@ public class iSign extends JFrame {
 
     private void s3_back_b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_b1ActionPerformed
         // TODO add your handling code here:
+        RS.SignList = RS.TransIdToSign(RS.SignIdList);
+        boolean[] IsSuccess = new boolean[3];
+
+        
+        for (int i = 0; i < RS.SignList.size(); i++) {
+            try {
+                Thread.sleep(1500);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            RecognizeChar RC = new RecognizeChar();
+            RC.CollectSample(RS.SignList.get(i).toString());
+            RC.ReadSign(true);
+            IsSuccess[i] = RC.Success;
+        }
+        
+        if (IsSuccess[0] == true && IsSuccess[1] == true && IsSuccess[2] == true) {
+            s1_prompt_l1.setText("Yes! You did it!");
+            w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+            w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+            w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+            w1_l.setText("");
+            w2_l.setText("");
+            w3_l.setText("");
+        } else {
+            s1_prompt_l1.setText("Please try again!");
+            if (IsSuccess[0] == true) {
+                w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+                w1_l.setText("");
+            } else {
+                w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/cross.png")));
+                w1_l.setText("");
+            }
+
+            if (IsSuccess[1] == true) {
+                w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+                w2_l.setText("");
+            } else {
+                w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/cross.png")));
+                w2_l.setText("");
+            }
+
+            if (IsSuccess[2] == true) {
+                w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/tick.png")));
+                w3_l.setText("");
+            } else {
+                w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/cross.png")));
+                w3_l.setText("");
+            }
+        }
+
     }//GEN-LAST:event_s3_back_b1ActionPerformed
 
     private void s3_back_b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3_back_b2ActionPerformed
         // TODO add your handling code here:
+        s1_prompt_l1.setText("Here is the answer");
+        w1_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/" + RS.SignList.get(0).toString() + ".png")));
+        w2_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/" + RS.SignList.get(1).toString() + ".png")));
+        w3_l.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/" + RS.SignList.get(2).toString() + ".png")));
+        w1_l.setText("");
+        w2_l.setText("");
+        w3_l.setText("");
     }//GEN-LAST:event_s3_back_b2ActionPerformed
+
+    private void s2_go_summaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_go_summaryActionPerformed
+        java.awt.CardLayout cl = (java.awt.CardLayout) (s2_panel.getLayout());
+        cl.show(s2_panel, "s2_summary");            // TODO add your handling code here:
+    }//GEN-LAST:event_s2_go_summaryActionPerformed
+
+    private void s2_go_quizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2_go_quizActionPerformed
+        java.awt.CardLayout cl = (java.awt.CardLayout) (s2_panel.getLayout());
+        cl.show(s2_panel, "s2_quiz");           // TODO add your handling code here:
+    }//GEN-LAST:event_s2_go_quizActionPerformed
+
+    private void quiz1_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiz1_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quiz1_bActionPerformed
+
+    private void quiz2_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiz2_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quiz2_bActionPerformed
+
+    private void quiz_answer_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiz_answer_bActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quiz_answer_bActionPerformed
+
+    private void quiz_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiz_back_bActionPerformed
+         java.awt.CardLayout cl = (java.awt.CardLayout) (s2_panel.getLayout());
+        cl.show(s2_panel, "s2_home"); // TODO add your handling code here:
+    }//GEN-LAST:event_quiz_back_bActionPerformed
+
+    private void summary_back_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summary_back_bActionPerformed
+        java.awt.CardLayout cl = (java.awt.CardLayout) (s2_panel.getLayout());
+        cl.show(s2_panel, "s2_home"); // TODO add your handling code here:// TODO add your handling code here:
+    }//GEN-LAST:event_summary_back_bActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1512,8 +1949,17 @@ public class iSign extends JFrame {
     private javax.swing.JLabel background1;
     private javax.swing.JLabel background2;
     private javax.swing.JLabel background3;
+    private javax.swing.JLabel background4;
+    private javax.swing.JLabel background5;
     private javax.swing.JLabel bg_blanks;
     private javax.swing.JButton bye_b;
+    private javax.swing.JLabel c1;
+    private javax.swing.JLabel c2;
+    private javax.swing.JLabel c3;
+    private javax.swing.JLabel c4;
+    private javax.swing.JLabel c5;
+    private javax.swing.JLabel c6;
+    private javax.swing.JLabel curve;
     private javax.swing.JButton fine_b;
     private javax.swing.JButton hello_b;
     private javax.swing.JButton hold_on_b;
@@ -1539,6 +1985,18 @@ public class iSign extends JFrame {
     private javax.swing.JButton n8_b;
     private javax.swing.JButton n9_b;
     private javax.swing.JButton n9_b2;
+    private javax.swing.JPanel quiz;
+    private javax.swing.JButton quiz1_b;
+    private javax.swing.JButton quiz2_b;
+    private javax.swing.JLabel quiz_answer;
+    private javax.swing.JButton quiz_answer_b;
+    private javax.swing.JPanel quiz_answer_prob;
+    private javax.swing.JButton quiz_back_b;
+    private javax.swing.JTabbedPane quiz_choose_p;
+    private javax.swing.JLabel quiz_prob1;
+    private javax.swing.JPanel quiz_prob_frame;
+    private javax.swing.JLabel quiz_prompt_l;
+    private javax.swing.JButton quiz_test_b;
     private javax.swing.JPanel root;
     private javax.swing.JButton s1_back_b;
     private javax.swing.JButton s1_go_b;
@@ -1549,8 +2007,15 @@ public class iSign extends JFrame {
     private javax.swing.JPanel s1_sym_hint_p;
     private javax.swing.JButton s2_back_b;
     private javax.swing.JButton s2_go_b;
+    private javax.swing.JButton s2_go_quiz;
+    private javax.swing.JButton s2_go_summary;
+    private javax.swing.JPanel s2_home;
     private javax.swing.JLabel s2_info_l;
     private javax.swing.JPanel s2_panel;
+    private javax.swing.JPanel s2_quiz;
+    private javax.swing.JLabel s2_quiz_info_l;
+    private javax.swing.JPanel s2_summary;
+    private javax.swing.JLabel s2_summary_info_l;
     private javax.swing.JButton s3_back_b;
     private javax.swing.JButton s3_back_b1;
     private javax.swing.JButton s3_back_b2;
@@ -1560,6 +2025,7 @@ public class iSign extends JFrame {
     private javax.swing.JButton see_b;
     private javax.swing.JPanel sentence_p;
     private javax.swing.JButton sorry_b;
+    private javax.swing.JButton summary_back_b;
     private javax.swing.JButton tomorrow_b;
     private javax.swing.JLabel w1_l;
     private javax.swing.JLabel w2_l;
